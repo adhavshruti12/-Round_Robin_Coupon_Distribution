@@ -8,11 +8,17 @@ require('dotenv').config();
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({
-  origin: "https://round-robin-coupon-distribution-rosy.vercel.app", // Allow all origins (change to frontend URL after first deployment)
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type"]
-}));
+const corsOptions = {
+  origin: "https://round-robin-coupon-distribution-rosy.vercel.app", // Your frontend URL
+  methods: "GET, POST, PUT, DELETE, OPTIONS",
+  allowedHeaders: "Content-Type, Authorization, Password", // Add "Password" header explicitly
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions)); // Enable preflight requests for all routes
+
+app.use(express.json());
 
 // Models
 const Coupon = mongoose.model('Coupon', new mongoose.Schema({
