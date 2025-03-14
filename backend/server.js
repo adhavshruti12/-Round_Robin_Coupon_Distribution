@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: "*", // Allow all origins (change to frontend URL after first deployment)
+  origin: "https://round-robin-coupon-distribution-rosy.vercel.app", // Allow all origins (change to frontend URL after first deployment)
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type"]
 }));
