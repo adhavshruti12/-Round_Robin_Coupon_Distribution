@@ -17,7 +17,7 @@ function AdminPanel() {
 
   const fetchCoupons = async () => {
     try {
-      const response = await fetch('http://localhost:5000/admin/coupons', {
+      const response = await fetch('https://round-robin-coupon-distribution-backend.vercel.app/admin/coupons', {
         headers: {
           username: loginForm.username,
           password: loginForm.password
@@ -32,7 +32,7 @@ function AdminPanel() {
 
   const fetchClaimHistory = async () => {
     try {
-      const response = await fetch('http://localhost:5000/admin/claims', {
+      const response = await fetch('https://round-robin-coupon-distribution-backend.vercel.app/admin/claims', {
         headers: {
           username: loginForm.username,
           password: loginForm.password
@@ -48,7 +48,7 @@ function AdminPanel() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/admin/login', {
+      const response = await fetch('https://round-robin-coupon-distribution-backend.vercel.app/admin/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(loginForm)
@@ -65,7 +65,7 @@ function AdminPanel() {
   const handleAddCoupon = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/admin/coupons', {
+      const response = await fetch('https://round-robin-coupon-distribution-backend.vercel.app/coupons', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ function AdminPanel() {
 
   const toggleCouponStatus = async (id) => {
     try {
-      await fetch(`http://localhost:5000/admin/coupons/${id}/toggle`, {
+      await fetch(`https://round-robin-coupon-distribution-backend.vercel.app/admin/coupons/${id}/toggle`, {
         method: 'PATCH',
         headers: {
           username: loginForm.username,
