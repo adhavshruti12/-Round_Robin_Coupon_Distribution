@@ -65,7 +65,7 @@ function AdminPanel() {
   const handleAddCoupon = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://round-robin-coupon-distribution-j2qe-backend.vercel.app/coupons', {
+      const response = await fetch('https://round-robin-coupon-distribution-j2qe-backend.vercel.app/admin/coupons', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
