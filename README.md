@@ -49,13 +49,6 @@ Fill out the form to claim a coupon.
 - Log in with the admin credentials (default: admin / admin123).
 - Add new coupons, manage existing coupons, and view claim history.
 
-## API Endpoints
-- POST /claim: Claim a coupon
-- POST /admin/login: Admin login
-- GET /admin/coupons: Get all coupons (admin only)
-- POST /admin/coupons: Add a new coupon (admin only)
-- PATCH /admin/coupons/:id/toggle: Toggle coupon status (admin only)
-- GET /admin/claims: Get claim history (admin only)
 
 ## Acknowledgements
 - Node.js
