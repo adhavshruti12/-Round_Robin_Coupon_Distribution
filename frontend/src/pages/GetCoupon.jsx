@@ -13,7 +13,7 @@ function GetCoupon() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/claim', {
+      const response = await fetch('https://round-robin-coupon-distribution-backend.vercel.app/claim', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: formData.email })
