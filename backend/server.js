@@ -11,7 +11,7 @@ app.use(cookieParser());
 const corsOptions = {
   origin: "https://round-robin-coupon-distribution-rosy.vercel.app", // Your frontend URL
   methods: "GET, POST, PUT, DELETE, OPTIONS",
-  allowedHeaders: "Content-Type, Authorization, Password", // Add "Password" header explicitly
+  allowedHeaders: "Content-Type, Authorization,Username, Password", // Add "Password" header explicitly
   credentials: true,
 };
 
